@@ -1,20 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import productsService from '../../services/ProductsService';
 import { useParams } from 'react-router-dom';
 
 function ProductDetail(props) {
     const [product, setProduct] = useState([]);
     const { id } = useParams();
-    const getProduct = () => {
-        const updateProducts = (apiProduct) => {setProduct(apiProduct)}
-        const showErrorMessage = (error) => alert(error.message);
+    const updateProducts = (apiProduct) => {setProduct(apiProduct)}
+    const showErrorMessage = (error) => alert(error.message);
+    useEffect(() => {
         productsService.getProduct(id, updateProducts, showErrorMessage);
-    }
-
+    }, []);
+        
     return (
         <div>
             <div>Single</div>
-            <button onClick={getProduct}>getProduct</button>
             <div>{JSON.stringify(product)}</div>
         </div>
     );

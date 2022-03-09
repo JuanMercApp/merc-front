@@ -1,5 +1,4 @@
 const getProducts = (searchQuery, successCallback, errorCallback) => {
-    console.log('callBackend');
     fetch(`http://localhost:4000/api/items?q=${searchQuery}`)
     .then((payload) => {
         return payload.json();

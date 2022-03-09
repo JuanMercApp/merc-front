@@ -1,0 +1,5 @@
+@use './variables';
+.app {
+    min-height: 100vh;
+    background-color: variables.$soft-gray;
+}
