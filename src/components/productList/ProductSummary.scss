@@ -1,0 +1,52 @@
+
+@use '../../variables';
+.product-summary {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid variables.$soft-gray;
+    padding: 16px 0;
+    cursor: pointer;
+
+    &__image {
+        border-radius: 4px;
+        height: 180px;
+        width: 180px;
+        min-height: 180px;
+        min-width: 180px;
+        margin: 0 16px;
+    }
+
+    &__description {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &__description-main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    &__description-main-amount {
+        font-size: variables.$focusfs;
+        font-weight: 500;
+    }       
+    &__description-main-status {
+        width: 18px;
+        height: 18px;
+    }
+    &__description-secundary {
+        font-size: variables.$mediumfs;
+    }
+    &__address {
+        font-size: variables.$smallfs;
+        margin-right: 60px;
+        color: variables.$gray;
+    }
+    p {margin: 0}
+    h2 {margin: 0; margin-right: 10px;}
+}

@@ -1,0 +1,6 @@
+@use '../../variables';
+.breadcrumb {
+    color: variables.$gray;
+    padding: 16px 0;
+    font-size: variables.$basefs;
+}

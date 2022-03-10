@@ -3,7 +3,6 @@ const getProducts = (searchQuery, successCallback, errorCallback) => {
     .then((payload) => {
         return payload.json();
     }).then((products) => {
-        console.log(products);
         successCallback(products);
     }).catch((error) => {
         errorCallback(error);
