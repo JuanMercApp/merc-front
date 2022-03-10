@@ -21,5 +21,21 @@ const getProduct = (productId, successCallback, errorCallback) => {
     });
 };
 
-const productsService = { getProducts, getProduct };
+const formatProductValue = (productValue, currency) => {
+    let formatter = new Intl.NumberFormat('es-AR', {
+        style: 'currency',
+        currency: 'ARS',
+        minimumFractionDigits: 0,
+    });
+    try {
+        formatter = new Intl.NumberFormat('es-AR', {
+            style: 'currency',
+            currency: currency,
+            minimumFractionDigits: 0
+        });
+    } catch(e) {}
+    return formatter.format(productValue)
+}
+
+const productsService = { getProducts, getProduct, formatProductValue };
 export default productsService;

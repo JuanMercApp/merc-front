@@ -7,6 +7,7 @@ import './ProductList.scss'
 
 function ProductList() {
     const [products, setProducts] = useState(null);
+    console.log(products);
     const [queryParams] = useSearchParams();
     const productsElements = () => {
         const elements = products.items.map((product) => (

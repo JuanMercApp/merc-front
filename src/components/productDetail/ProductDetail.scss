@@ -1,0 +1,99 @@
+@use '../../variables';
+
+.product-detail {
+    @media (min-width: 1080px) {
+        margin: 0 140px;
+    }
+
+    &__main-section {
+        padding: 32px;
+        background-color: variables.$white;
+        border-radius: 4px;
+    }
+
+    &__principal {
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       @media (min-width: 1080px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+       }
+       
+    }
+
+    &__principal-image {
+        max-width: 680px;
+        min-width: 500px;
+        height: 680px;
+    }
+
+    &__description-header {
+        padding-top: 32px;
+        font-size: variables.$sub-sectionfs;
+        @media (max-width: 1080px) {
+            text-align: center;
+        }
+    }
+
+    &__description {
+        font-size: variables.$descriptionfs;
+        color: variables.$gray;
+        margin: 0;
+        margin-top: 32px;
+    }                    
+}
+
+.product-info {
+    max-width: 300px;
+    word-break: break-word;
+    position: relative;
+    &__sold-amount {
+        margin-bottom: 16px;
+        font-size: variables.$basefs;
+        margin: 0;
+    }
+    &__title {
+        font-size: variables.$focusfs;
+        font-weight: bold;
+    }
+
+    &__price-header {
+        font-size: variables.$principalfs;
+        font-weight: 500;
+    }
+
+    &__price {
+        padding: 32px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__price-digits {
+        margin: 0;
+        margin-bottom: 12px;
+        font-size: variables.$focusfs;
+        font-weight: 500;
+    }
+    &__buy-button {
+        background-color: #3483fa;
+        border-color: transparent;
+        color: #fff;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        border: 1px solid transparent;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: variables.$mediumfs;
+        font-weight: bold;
+
+        
+
+        width: 100%;
+        &:hover {
+            background-color: #07c;
+        }
+    }
+}

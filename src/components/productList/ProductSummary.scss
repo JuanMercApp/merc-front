@@ -22,6 +22,7 @@
         align-items: flex-start;
         flex-direction: column;
         flex: 1;
+        padding-top: 16px;
     }
 
     &__description-main {
@@ -43,10 +44,11 @@
         font-size: variables.$mediumfs;
     }
     &__address {
+        padding-top: 16px;
         font-size: variables.$smallfs;
         margin-right: 60px;
         color: variables.$gray;
     }
     p {margin: 0}
-    h2 {margin: 0; margin-right: 10px;}
+    h2 {margin-right: 10px;}
 }

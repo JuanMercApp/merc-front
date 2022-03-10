@@ -13,7 +13,7 @@ function Navbar () {
     };
 
     const searchProduct = () => {
-        navigate(`/items?q=${searchQuery}`, { replace: true });
+        navigate(`/items?q=${searchQuery}`);
     };
 
     return (
