@@ -13,7 +13,7 @@ function ProductSummary(props) {
 
     return (
         product != null ? 
-            (<div className="product-summary" onClick={selectProduct}>
+            (<div className="product-summary" onClick={selectProduct} tabIndex="0">
                 <img className="product-summary__image" src={product.picture} alt={props.title}/>
                 <div className="product-summary__description">
                     <div className="product-summary__description-main">

@@ -10,7 +10,7 @@ function ProductList() {
     console.log(products);
     const [queryParams] = useSearchParams();
     const productsElements = () => {
-        const elements = products.items.map((product) => (
+        const elements = products.items.slice(0,4).map((product) => (
             <li key={product.id}>
                 <ProductSummary product={product}/>
             </li>

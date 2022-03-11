@@ -24,9 +24,9 @@
     }
 
     &__principal-image {
-        max-width: 680px;
-        min-width: 500px;
-        height: 680px;
+        padding: 0;
+        max-height: 100%;
+        max-width: 100%;
     }
 
     &__description-header {
